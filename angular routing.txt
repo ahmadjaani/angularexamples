@@ -1,0 +1,45 @@
+Angular Routing: SPA (Single Page Application)
+------------------------------------------------
+HTML: router module 
+ 
+Angular 7: Angular CLI ask at the command prompt for routing services
+CLI also ask for styling types. CSS, SCASS, ...
+
+routes:
+----------
+	const routes = Routes[] = [
+		{path:'', component:'HomeComponent'}
+		{path:'contact', component: 'ContactComponent'}
+		{path:'**', component: 'ErrorComponent'}
+	];
+
+-------------------------------------------------
+@NgModule({
+	imports: [
+		BrowserModule,
+		RouterModule,
+		RouterModule.forRouts(routes)
+	],
+	exports: [],
+	providers: [HeroService],
+	bootstrap: [AppComponent]
+})
+
+export class AppModule{}
+----------------------------------------------------
+component -> @Component
+module -> @NgModule
+service -> @Injectable
+
+
+<router-outlet></router-outlet>
+
+<a routerLink="home"></a>
+
+<a routerLink="contact"></a>
+
+<a routerLink="settings"></a>
+
+Angular Services
+Anguler Directives
+Angular HttpClient Module
