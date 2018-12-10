@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form #plyFrm="ngForm">
+        <div class="form-group">
+          Player Id : <input type="text" name="pid"  #pid="ngModel" [(ngModel)]="ply.pid" class="form-control" />
+        </div>
+        <div class="form-group">
+          Player Name : <input type="text" name="pname" #pname="ngModel" [(ngModel)]="ply.pname" class="form-control" />
+        </div>
+        <div class="form-group">
+          Player Img : <input type="text" name="pimage" #pimage="ngModel" [(ngModel)]="ply.pimage" class="form-control" />
+        </div>
+        <div class="form-group">
+          Player Country : <input type="text" name="pcountry" #pcountry="ngModel" [(ngModel)]="ply.pcountry" class="form-control" />
+        </div>
+        <div class="form-group">
+          Player Age:<input type="text" name="page" #page="ngModel" [(ngModel)]="ply.page" class="form-control" />
+        </div>
+
+        <button (click)=" btnSave_click()" class="btn btn-primary">Save</button>
+      </form>
+      <h3>{{ply|json}}</h3>
+    </div>
+  </div>
+</div>
